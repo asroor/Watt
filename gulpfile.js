@@ -56,9 +56,8 @@ function css() {
 		}))
 		.pipe(cleanCss()) // CSS minification commented out
 		.pipe(postcss([autoprefixer2()])) // PostCSS added
-		.pipe(rename({
-			basename: 'main',
-			suffix: '.min',
+		.pipe(rename((path) => {
+			path.basename = path.basename
 		}))
 		.pipe(sourceMap.write('.'))
 		.pipe(size({
@@ -75,7 +74,7 @@ function js() {
 			presets: ['@babel/env'],
 		}))
 		// .pipe(uglify()) // JavaScript minification commented out
-		.pipe(concat('main.min.js'))
+		.pipe(concat('main.js'))
 		.pipe(sourceMap.write('.'))
 		.pipe(size({
 			showFiles: true,
