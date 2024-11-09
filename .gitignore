@@ -1,0 +1,20 @@
+# Node.js
+node_modules/
+dist/
+build/
+
+# IDE va OS fayllari
+.DS_Store
+.idea/
+.vscode/
+
+# Mahalliy konfiguratsiya va maxfiy ma'lumotlar
+.env
+*.pem
+*.key
+*.crt
+
+# Log va vaqtinchalik fayllar
+*.log
+.cache/
+tmp/
