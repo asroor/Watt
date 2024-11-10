@@ -31,3 +31,11 @@
 .nav__links {
 	column-gap: 24px;
 }
+
+.logo {
+	font-family: var(--bs-font-inter);
+	font-size: 16px;
+	font-weight: 700;
+	text-transform: uppercase;
+	column-gap: 10px;
+}

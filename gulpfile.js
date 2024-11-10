@@ -21,7 +21,7 @@ const paths = {
 		dest: 'dist/',
 	},
 	css: {
-		src: 'src/scss/main.scss',
+		src: ['src/scss/*.scss', '!src/scss/bootstrap.scss'],
 		dest: 'dist/css/',
 	},
 	js: {

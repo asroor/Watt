@@ -1,0 +1,52 @@
+footer {
+	padding-block-end: 74px;
+	background-color: var(--bs-dark);
+}
+
+.footer-top {
+	padding: 19px 20px;
+	max-width: 1140px;
+	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+
+	h2 {
+		font-size: 24px;
+	}
+}
+
+.footer-top__form {
+	grid-template-columns: 244px 244px 193px;
+	column-gap: 4px;
+
+
+	button,
+	input {
+		background-color: var(--bs-blue);
+		padding-inline: 21px;
+		height: 40px;
+		font-size: 14px;
+	}
+
+	input {
+		color: var(--bs-dark);
+		background: var(--bs-gray-100);
+
+		&::placeholder {
+			color: var(--bs-dark);
+		}
+	}
+}
+
+.footer-wrapper {
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.footer-logo {
+	font-size: 16px;
+}
+
+.footer-wrapper__serie {
+	li {
+		font-size: 14px;
+	}
+}
+
