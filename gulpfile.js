@@ -21,7 +21,7 @@ const paths = {
 		dest: 'dist/',
 	},
 	css: {
-		src: 'src/scss/*.scss',
+		src: 'src/scss/main.scss',
 		dest: 'dist/css/',
 	},
 	js: {
@@ -108,20 +108,20 @@ function images() {
 // Watch task to monitor file changes
 function watch() {
 	gulp.watch(paths.css.src, css);
-	gulp.watch(paths.html.src, html);
 	gulp.watch(paths.js.src, js);
 	gulp.watch(paths.images.src, images);
 	gulp.watch('src/images/*.svg', svgMin);
+	gulp.watch(paths.html.src, html);
 }
 
 // Define default and build tasks
-const build = gulp.series(gulp.parallel(css, js, html, images, svgMin), watch);
+const build = gulp.series(gulp.parallel(css, js, images, svgMin, html), watch);
 
 exports.css = css;
 exports.js = js;
-exports.html = html;
 exports.images = images;
 exports.svgMin = svgMin;
+exports.html = html;
 exports.build = build;
 
 exports.default = build;

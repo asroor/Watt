@@ -26,8 +26,9 @@
 		"gulp-size": "^4.0.1",
 		"gulp-sourcemaps": "^3.0.0",
 		"gulp-uglify": "^3.0.2",
+		"node-sass": "^9.0.0",
 		"purgecss": "^6.0.0",
-		"sass": "^1.67.0"
+		"sass": "^1.80.6"
 	},
 	"dependencies": {
 		"bootstrap": "^5.3.3",

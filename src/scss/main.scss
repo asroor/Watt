@@ -1,5 +1,4 @@
-// O'zingizning fayllaringizni import qilish
-@import "variables";
-@import "header";
-@import "common";
-@import "footer";
+@use "variables";
+@use "header";
+@use "common";
+@use "footer";

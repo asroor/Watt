@@ -1,6 +1,33 @@
 .header-top {
-	background-color: $bs-dark;
+	background-color: var(--bs-dark);
+	padding-block: 8px;
 }
+
 .header-top__links {
 	column-gap: 28px;
+
+	a {
+		color: #fff;
+		font-size: 14px;
+		font-weight: 400;
+		text-decoration: none;
+		column-gap: 4px;
+
+		img {
+			width: 20px;
+			flex-shrink: 0;
+		}
+	}
+}
+
+.header-wrapper {
+	padding: 8px 0;
+}
+
+.header__left {
+	column-gap: 19px;
+}
+
+.nav__links {
+	column-gap: 24px;
 }

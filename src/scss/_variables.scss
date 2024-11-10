@@ -1,4 +1,8 @@
-$blue: #1B70EF;
-$green: #60D66A;
-$bs-dark: #282C32;
-$bs-gray-100: #F5F5F5;
+:root {
+	--bs-blue: #1B70EF;
+	--bs-dark: #282C32;
+	--bs-gray-100: #F5F5F5;
+	--bs-green: #60D66A;
+	--bs-font-sans-serif: 'Gilroy', 'sans-serif';
+	--bs-body-font-family: var(--bs-font-sans-serif);
+}
