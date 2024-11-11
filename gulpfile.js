@@ -21,7 +21,7 @@ const paths = {
 		dest: 'dist/',
 	},
 	css: {
-		src: ['src/scss/*.scss', '!src/scss/bootstrap.scss'],
+		src: ['src/scss/*.scss'],
 		dest: 'dist/css/',
 	},
 	js: {
@@ -54,7 +54,7 @@ function css() {
 		.pipe(autoprefixer({
 			cascade: false,
 		}))
-		.pipe(cleanCss()) // CSS minification commented out
+		.pipe(cleanCss()) // CSS minification added back
 		.pipe(postcss([autoprefixer2()])) // PostCSS added
 		.pipe(rename((path) => {
 			path.basename = path.basename
@@ -73,7 +73,7 @@ function js() {
 		.pipe(babel({
 			presets: ['@babel/env'],
 		}))
-		// .pipe(uglify()) // JavaScript minification commented out
+		.pipe(uglify()) // JavaScript minification added back
 		.pipe(concat('main.js'))
 		.pipe(sourceMap.write('.'))
 		.pipe(size({
@@ -100,8 +100,7 @@ function svgMin() {
 // Optimize images and convert to WebP format
 function images() {
 	return gulp.src(paths.images.src)
-		// .pipe(svgmin())
-		.pipe(webp())
+		.pipe(webp()) // Convert images to WebP
 		.pipe(gulp.dest(paths.images.dest));
 }
 

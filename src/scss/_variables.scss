@@ -1,9 +1,15 @@
 :root {
 	--bs-blue: #1B70EF;
 	--bs-dark: #282C32;
+	--bs-gray-50: #eff2ff;
 	--bs-gray-100: #F5F5F5;
+	--bs-gray-200: #939393;
+	--bs-border-color: #E0E0E0;
 	--bs-green: #60D66A;
+	--bs-shadow-rgb: rgba(0, 0, 0, 0.15);
+	--bs-header-shadow: rgba(0, 0, 0, 0.05);
 	--bs-font-sans-serif: 'Gilroy', 'sans-serif';
 	--bs-body-font-family: var(--bs-font-sans-serif);
 	--bs-font-inter: 'Inter', 'sans-serif';
+	--bs-accordion-bg: rgba(27, 112, 239, 0.04);
 }
