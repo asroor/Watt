@@ -9,14 +9,392 @@
 	<link rel="stylesheet" href="fonts/gilroy/stylesheet.css">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="libs/splide.min.css">
+	<link rel="stylesheet" href="libs/fancyapps.min.css">
 	<link rel="stylesheet" href="css/main.css">
-</head>
 
 <body>
 	<div class="overflow-hidden wrapper">
+		<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+			<div class="pt-4 offcanvas-header">
+				<h5 class="offcanvas-title fw-semibold text-black" id="offcanvasRightLabel">Kаталог</h5>
+				<button type="button" class="btn-close d-flex align-items-center justify-content-center"
+					data-bs-dismiss="offcanvas" aria-label="Close">
+					<img src="images/close.svg" alt="close btn">
+				</button>
+			</div>
+			<div class="px-3 sidebar">
+				<div class="accordion" id="accordionExample">
+					<div class="p-0 m-0 border-0 accordion-item">
+						<button type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+							aria-controls="collapseOne"
+							class="w-100 fw-semibold py-2 px-3 d-flex align-items-center column-gap-4 rounded-4 border-0 text-start sidebar-acc__btn">
+							<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+								<g clip-path="url(#clip0_81_1087)">
+									<path
+										d="M14.6444 8.265C15.8571 8.265 16.8439 9.45643 16.8439 10.9221C16.8439 12.3871 15.8571 13.5793 14.6444 13.5793C13.4311 13.5793 12.4443 12.3871 12.4443 10.9221C12.4443 9.45643 13.4311 8.265 14.6444 8.265ZM14.6444 28.595C15.8571 28.595 16.8439 29.7871 16.8439 31.2521C16.8439 32.7171 15.8571 33.9093 14.6444 33.9093C13.4311 33.9093 12.4443 32.7171 12.4443 31.2521C12.4443 29.7871 13.4311 28.595 14.6444 28.595Z"
+										fill="#282C32" />
+									<path
+										d="M14.3567 26.79V15.3843C14.3567 15.2264 14.4855 15.0986 14.6444 15.0986C16.636 15.0986 18.2572 13.225 18.2572 10.9221C18.2572 10.8979 18.2557 10.8736 18.2557 10.8493L18.2543 10.8107C18.2507 10.6579 18.3687 10.5293 18.5226 10.5186L28.0712 9.87C28.1489 9.86429 28.2237 9.89071 28.2819 9.94071C28.3395 9.99143 28.374 10.0629 28.3783 10.1393C28.4998 12.3064 29.8772 14.0036 31.5135 14.0036C31.6724 14.0036 31.8011 14.1314 31.8011 14.2893V23.8779C31.8011 24.0357 31.6724 24.1636 31.5135 24.1636C30.2426 24.1636 29.1033 25.1736 28.6113 26.735C28.5797 26.8357 28.4955 26.9107 28.3912 26.9307L17.8824 28.9557C17.8637 28.9593 17.8458 28.9614 17.8271 28.9614C17.7285 28.9614 17.635 28.9107 17.5825 28.825C16.9036 27.73 15.8053 27.0757 14.6444 27.0757C14.4855 27.0757 14.3567 26.9479 14.3567 26.79ZM23.2307 17.0543V13.9236C22.2619 14.0221 21.3902 14.6114 20.745 15.515L22.4949 17.5814C22.6985 17.3157 22.9502 17.13 23.2307 17.0543ZM23.8061 21.5921V24.7229C24.7749 24.6243 25.6466 24.0343 26.2911 23.1314L24.5419 21.065C24.3383 21.3307 24.0866 21.5164 23.8061 21.5921ZM23.2307 21.5921C22.9502 21.5164 22.6977 21.3307 22.4949 21.0643L20.745 23.1314C21.3902 24.0343 22.2619 24.6243 23.2307 24.7229V21.5921ZM22.195 20.5307C22.085 20.2571 22.0123 19.945 21.9857 19.6086H19.6194C19.6618 20.7393 19.956 21.7779 20.425 22.6214L22.195 20.5307ZM21.9857 19.0371C22.0123 18.7014 22.085 18.3893 22.195 18.1157L20.425 16.0243C19.956 16.8679 19.6618 17.9071 19.6194 19.0371H21.9857ZM23.8061 13.9236V17.0543C24.0866 17.13 24.3383 17.3157 24.5419 17.5814L26.2911 15.515C25.6466 14.6114 24.7749 14.0221 23.8061 13.9236ZM24.8411 18.1157C24.9511 18.3893 25.0245 18.7014 25.0511 19.0371H27.4167C27.3742 17.9071 27.0801 16.8679 26.6118 16.0243L24.8411 18.1157ZM25.0511 19.6086C25.0245 19.945 24.9511 20.2571 24.8411 20.5307L26.6118 22.6214C27.0801 21.7779 27.3742 20.7393 27.4167 19.6086H25.0511Z"
+										fill="#282C32" />
+									<path
+										d="M1.16232 24.9607C1.3299 24.8429 1.50755 24.7464 1.69024 24.67V11.2329C0.65094 10.5636 2.67029e-05 9.41286 2.67029e-05 8.13143C2.67029e-05 7.04357 0.479759 6.015 1.31551 5.31071C2.15055 4.60643 3.25027 4.30357 4.332 4.48143L8.91427 5.23214L9.68313 3.06786C10.3348 1.23286 12.089 0 14.0482 0H19.1253C20.9716 0 22.6395 1.08714 23.3731 2.77L23.6637 3.43643L31.5494 5.08071C33.5841 5.105 35.2341 7.22429 35.2341 9.82714C35.2341 11.1779 34.7874 12.4564 34.0042 13.3564V24.8107C34.7874 25.7107 35.2341 26.9893 35.2341 28.34C35.2341 30.9579 33.5647 33.0879 31.5135 33.0879C30.6468 33.0879 29.8038 32.7014 29.14 31.9993C28.5617 31.3871 28.1395 30.5579 27.9352 29.64L18.8304 31.3943C18.7635 33.9471 16.9115 36 14.6444 36C13.7353 36 12.8945 35.6693 12.2077 35.11L1.48669 29.6114C0.569664 29.1414 2.67029e-05 28.2129 2.67029e-05 27.1886C2.67029e-05 26.2907 0.42366 25.4786 1.16232 24.9607ZM4.2385 5.045C3.32435 4.89571 2.39437 5.15071 1.68736 5.74643C0.981068 6.34214 0.575417 7.21143 0.575417 8.13143C0.575417 9.50929 1.46584 10.71 2.79067 11.1193L11.2741 13.7379C10.7483 12.9286 10.4563 11.9436 10.4563 10.9221C10.4563 8.91286 11.5632 7.19214 13.1225 6.5L4.2385 5.045ZM21.0867 5.58714L20.4134 4.04286C20.1912 3.53286 19.6856 3.20357 19.1253 3.20357H17.6703V4.82643L21.0867 5.58714ZM17.0949 4.77V3.20357H14.0482C13.4541 3.20357 12.9226 3.57714 12.7248 4.13357L12.4989 4.77H17.0949ZM22.8452 2.99714C22.2022 1.52357 20.7421 0.571429 19.1253 0.571429H14.0482C12.3328 0.571429 10.7965 1.65071 10.2254 3.25786L9.49109 5.32643L11.5697 5.66714L12.1818 3.94357C12.4608 3.15929 13.211 2.63214 14.0482 2.63214H19.1253C19.915 2.63214 20.6278 3.09643 20.9414 3.81571L21.7814 5.74143L24.2851 6.29857L22.8452 2.99714ZM23.9442 4.07857L24.9799 6.45286L28.4056 7.215C28.8422 6.37071 29.478 5.73429 30.2059 5.38429L23.9442 4.07857ZM14.6444 35.4286C16.636 35.4286 18.2572 33.555 18.2572 31.2521C18.2572 31.2357 18.2565 31.2193 18.2557 31.2029L18.255 31.1643C18.2521 31.0257 18.3507 30.905 18.488 30.8786L28.1079 29.0243C28.1258 29.0214 28.1438 29.0193 28.1625 29.0193C28.2208 29.0193 28.2776 29.0371 28.3265 29.07C28.3898 29.1143 28.433 29.1814 28.4459 29.2579C28.7667 31.1457 30.0563 32.5164 31.5135 32.5164C33.2475 32.5164 34.6587 30.6429 34.6587 28.34C34.6587 27.0879 34.2379 25.9107 33.5043 25.1114C33.4561 25.0593 33.4288 24.9907 33.4288 24.9193V13.2479C33.4288 13.1771 33.4561 13.1079 33.5043 13.0557C34.2379 12.2564 34.6587 11.08 34.6587 9.82714C34.6587 7.52429 33.2475 5.65071 31.5135 5.65071C30.4094 5.65071 29.4046 6.40286 28.8264 7.66214C28.7825 7.75786 28.6897 7.82143 28.584 7.82857L17.8041 8.56071C17.6983 8.56929 17.5991 8.51786 17.5422 8.43C16.8518 7.35929 15.7952 6.74571 14.6444 6.74571C12.6521 6.74571 11.0317 8.61929 11.0317 10.9221C11.0317 12.1364 11.4891 13.2893 12.2882 14.085C12.3414 14.1386 12.3716 14.2107 12.3716 14.2864V27.8879C12.3716 27.9636 12.3414 28.0357 12.2882 28.0893C11.4891 28.885 11.0317 30.0379 11.0317 31.2521C11.0317 33.555 12.6521 35.4286 14.6444 35.4286ZM1.75065 29.1043L11.2014 33.9507C10.7318 33.1836 10.4563 32.2543 10.4563 31.2521C10.4563 30.045 10.8634 28.89 11.5834 28.0143L3.47251 25.1564C2.79858 24.9193 2.07791 25.0179 1.49389 25.4271C0.910583 25.8371 0.575417 26.4786 0.575417 27.1886C0.575417 27.9986 1.02566 28.7321 1.75065 29.1043Z"
+										fill="#282C32" />
+									<path
+										d="M31.5135 12.4843C30.4251 12.4843 29.5428 11.2946 29.5428 9.82714C29.5428 8.35964 30.4251 7.17 31.5135 7.17C32.6019 7.17 33.4842 8.35964 33.4842 9.82714C33.4842 11.2946 32.6019 12.4843 31.5135 12.4843Z"
+										fill="#282C32" />
+									<path
+										d="M31.5135 30.9971C30.4251 30.9971 29.5428 29.8075 29.5428 28.34C29.5428 26.8725 30.4251 25.6829 31.5135 25.6829C32.6019 25.6829 33.4842 26.8725 33.4842 28.34C33.4842 29.8075 32.6019 30.9971 31.5135 30.9971Z"
+										fill="#282C32" />
+								</g>
+								<defs>
+									<clipPath id="clip0_81_1087">
+										<rect width="35.234" height="36" fill="#282C32" transform="matrix(-1 0 0 1 35.2341 0)" />
+									</clipPath>
+								</defs>
+							</svg>
+							Газовые генераторы
+						</button>
+						<div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+							<div class="d-flex align-items-start flex-column catalog-content">
+								<a href="index.html"
+									class="d-flex align-items-center justify-content-between w-100 catalog-content__line">
+									<h1 class="m-0 text-black fw-normal">REG</h1>
+									<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+								</a>
+								<a href="index.html"
+									class="d-flex align-items-center justify-content-between w-100 catalog-content__line">
+									<h1 class="m-0 text-black fw-normal">REG</h1>
+									<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+								</a>
+								<a href="index.html"
+									class="d-flex align-items-center justify-content-between w-100 catalog-content__line">
+									<h1 class="m-0 text-black fw-normal">Poweron</h1>
+									<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+								</a>
+								<a href="index.html"
+									class="d-flex align-items-center justify-content-between w-100 catalog-content__line">
+									<h1 class="m-0 text-black fw-normal">Poweron</h1>
+									<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+								</a>
+								<a href="index.html"
+									class="d-flex align-items-center justify-content-between w-100 catalog-content__line">
+									<h1 class="m-0 text-black fw-normal">Generac</h1>
+									<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+								</a>
+								<a href="index.html"
+									class="d-flex align-items-center justify-content-between w-100 catalog-content__line">
+									<h1 class="m-0 text-black fw-normal">Generac</h1>
+									<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+								</a>
+								<a href="index.html"
+									class="d-flex align-items-center justify-content-between w-100 catalog-content__line">
+									<h1 class="m-0 text-black fw-normal">Mirkon</h1>
+									<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+								</a>
+								<a href="index.html"
+									class="d-flex align-items-center justify-content-between w-100 catalog-content__line">
+									<h1 class="m-0 text-black fw-normal">Mirkon</h1>
+									<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+								</a>
+								<a href="index.html"
+									class="d-flex align-items-center justify-content-between w-100 catalog-content__line">
+									<h1 class="m-0 text-black fw-normal">EVOline</h1>
+									<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+								</a>
+								<a href="index.html"
+									class="d-flex align-items-center justify-content-between w-100 catalog-content__line">
+									<h1 class="m-0 text-black fw-normal">EVOline</h1>
+									<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="p-0 m-0 border-0 accordion-item">
+						<button type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false"
+							aria-controls="collapse"
+							class="w-100 fw-semibold py-2 px-3 d-flex align-items-center column-gap-4 rounded-4 border-0 text-start sidebar-acc__btn">
+							<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+								<path
+									d="M18.692 5.08399V1.59999C18.692 1.43599 18.556 1.29999 18.392 1.29999H9.60398C9.43998 1.29999 9.30398 1.43599 9.30398 1.59999V5.08799C7.70798 5.77199 6.59198 7.35999 6.59198 9.19999V19.668C6.59198 21.5576 7.75638 23.2184 9.51198 23.8688V26.4C9.51198 26.564 9.64798 26.7 9.81198 26.7H10.816C10.98 26.7 11.116 26.564 11.116 26.4C11.116 26.056 11.392 25.78 11.736 25.78C12.08 25.78 12.36 26.056 12.36 26.4C12.36 26.564 12.492 26.7 12.66 26.7H15.34C15.508 26.7 15.64 26.564 15.64 26.4C15.64 26.056 15.92 25.78 16.26 25.78C16.604 25.78 16.884 26.056 16.884 26.4C16.884 26.564 17.02 26.7 17.184 26.7H18.188C18.352 26.7 18.488 26.564 18.488 26.4V23.868C19.3466 23.5518 20.0873 22.9793 20.6097 22.228C21.132 21.4767 21.4107 20.583 21.408 19.668V9.19999C21.408 7.35599 20.288 5.77199 18.692 5.08399ZM11.224 1.89999H16.772V4.72399H14.296V3.74399H14.728C14.8075 3.74399 14.8839 3.71238 14.9401 3.65612C14.9964 3.59986 15.028 3.52355 15.028 3.44399C15.028 3.36442 14.9964 3.28812 14.9401 3.23186C14.8839 3.17559 14.8075 3.14399 14.728 3.14399H13.268C13.1884 3.14399 13.1121 3.17559 13.0558 3.23186C12.9996 3.28812 12.968 3.36442 12.968 3.44399C12.968 3.52355 12.9996 3.59986 13.0558 3.65612C13.1121 3.71238 13.1884 3.74399 13.268 3.74399H13.696V4.72399H11.224V1.89999ZM9.82798 13.268C10.032 13.968 10.436 14.512 11.116 14.848C11.176 12.544 12.94 10.776 15.384 9.21599C14.436 10.432 14.888 11.304 15.852 13.52C16.072 12.544 16.668 12.012 17.572 11.84C16.388 15.636 21.444 15.924 15.204 19.652C16.26 17.94 15.5 16.32 13.952 14.74C12.708 16.132 12.48 17.744 13.556 19.652C10.156 18.828 9.09198 16.592 9.82798 13.268Z"
+									fill="#282C32" />
+							</svg>
+							Газовые электростанции
+						</button>
+						<div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+							<div class="d-flex align-items-start flex-column catalog-content">
+								<a href="index.html"
+									class="d-flex align-items-center justify-content-between w-100 catalog-content__line">
+									<h1 class="m-0 text-black fw-normal">REG</h1>
+									<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+								</a>
+								<a href="index.html"
+									class="d-flex align-items-center justify-content-between w-100 catalog-content__line">
+									<h1 class="m-0 text-black fw-normal">REG</h1>
+									<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+								</a>
+								<a href="index.html"
+									class="d-flex align-items-center justify-content-between w-100 catalog-content__line">
+									<h1 class="m-0 text-black fw-normal">Poweron</h1>
+									<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+								</a>
+								<a href="index.html"
+									class="d-flex align-items-center justify-content-between w-100 catalog-content__line">
+									<h1 class="m-0 text-black fw-normal">Poweron</h1>
+									<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+								</a>
+								<a href="index.html"
+									class="d-flex align-items-center justify-content-between w-100 catalog-content__line">
+									<h1 class="m-0 text-black fw-normal">Generac</h1>
+									<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+								</a>
+								<a href="index.html"
+									class="d-flex align-items-center justify-content-between w-100 catalog-content__line">
+									<h1 class="m-0 text-black fw-normal">Generac</h1>
+									<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+								</a>
+								<a href="index.html"
+									class="d-flex align-items-center justify-content-between w-100 catalog-content__line">
+									<h1 class="m-0 text-black fw-normal">Mirkon</h1>
+									<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+								</a>
+								<a href="index.html"
+									class="d-flex align-items-center justify-content-between w-100 catalog-content__line">
+									<h1 class="m-0 text-black fw-normal">Mirkon</h1>
+									<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+								</a>
+								<a href="index.html"
+									class="d-flex align-items-center justify-content-between w-100 catalog-content__line">
+									<h1 class="m-0 text-black fw-normal">EVOline</h1>
+									<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+								</a>
+								<a href="index.html"
+									class="d-flex align-items-center justify-content-between w-100 catalog-content__line">
+									<h1 class="m-0 text-black fw-normal">EVOline</h1>
+									<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="p-0 m-0 border-0 accordion-item">
+						<button type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false"
+							aria-controls="collapse3"
+							class="w-100 fw-semibold py-2 px-3 d-flex align-items-center column-gap-4 rounded-4 border-0 text-start sidebar-acc__btn">
+							<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+								<g clip-path="url(#clip0_81_1100)">
+									<path d="M12.1997 10.4706L10.6224 12.0479L13.7573 15.1826L15.3346 13.6053L12.1997 10.4706Z"
+										fill="#282C32" />
+									<path
+										d="M25.4208 9.71211L16.2889 0.580766C15.7277 0.019607 14.8888 -0.152641 14.1519 0.142022L7.57677 2.77191L6.27852 1.47373C5.93649 1.13181 5.37999 1.13171 5.03796 1.47373L3.25137 3.25997C2.62796 3.1669 1.99166 3.3422 1.50243 3.74318C1.00795 4.14844 0.70961 4.74741 0.68397 5.38652L0.000411137 22.4751C-0.00412873 22.589 0.0844502 22.685 0.198308 22.6895C0.201145 22.6896 0.203931 22.6897 0.206717 22.6897C0.31686 22.6897 0.408328 22.6027 0.412765 22.4916L1.09632 5.40303C1.11727 4.88164 1.36067 4.39296 1.76404 4.06234C2.0775 3.80544 2.46504 3.6625 2.86202 3.64924L2.24857 4.2625C2.08282 4.4282 1.99155 4.64857 1.99155 4.88298C1.99155 5.11739 2.08282 5.33777 2.24852 5.50352L2.29707 5.55206L1.48768 25.7854C1.48314 25.8993 1.57172 25.9953 1.68563 25.9998C1.68841 25.9999 1.6912 26 1.69404 26C1.80418 26 1.89565 25.9129 1.90009 25.8019L2.6942 5.94918L3.56493 6.8198L3.30595 8.11612C3.17543 8.76761 3.37802 9.43669 3.84779 9.90587L14.5371 20.5951C14.9235 20.9815 15.4309 21.1746 15.9385 21.1746C16.446 21.1746 16.9534 20.9814 17.3398 20.5951L25.4208 12.5141C26.1933 11.7416 26.1933 10.4847 25.4208 9.71211ZM2.54041 5.21169C2.45261 5.12394 2.40427 5.0072 2.40427 4.88298C2.40427 4.75881 2.45261 4.64207 2.54041 4.55433L5.32985 1.76556C5.42039 1.67502 5.53935 1.62973 5.65832 1.62973C5.77728 1.62973 5.8962 1.67502 5.98674 1.76556L6.30097 2.07977L2.85464 5.52596L2.54041 5.21169ZM3.78893 6.46014L3.14648 5.81773L6.59281 2.37159L7.23525 3.014L3.78893 6.46014ZM10.3918 3.65775C10.4329 3.46296 10.5628 3.3099 10.7484 3.23778C12.0845 2.71784 13.4207 2.19837 14.7568 1.67889C14.825 1.65237 14.8961 1.63948 14.9666 1.63948C15.1174 1.63948 15.2654 1.69839 15.376 1.80889L15.8145 2.24737C15.9301 2.36288 15.9901 2.51635 15.9835 2.67951C15.9769 2.84268 15.9047 2.99084 15.7801 3.0968C14.7783 3.95056 13.776 4.80431 12.774 5.65761C12.546 5.85204 12.2014 5.83832 11.9895 5.62645L10.5487 4.18626C10.4079 4.04532 10.3508 3.8527 10.3918 3.65775ZM15.773 13.7512L13.9034 15.6202C13.8631 15.6605 13.8103 15.6806 13.7575 15.6806C13.7047 15.6806 13.6519 15.6604 13.6116 15.6202L10.185 12.1938C10.1044 12.1132 10.1044 11.9825 10.185 11.902L12.0541 10.033C12.1347 9.9524 12.2654 9.9524 12.3459 10.033L15.773 13.4594C15.8117 13.498 15.8335 13.5506 15.8335 13.6053C15.8335 13.66 15.8118 13.7125 15.773 13.7512ZM17.1747 12.3496C17.1344 12.3899 17.0816 12.41 17.0288 12.41C16.976 12.41 16.9232 12.3898 16.8829 12.3495L13.4563 8.92263C13.3757 8.84205 13.3757 8.71138 13.4563 8.6308C13.5369 8.55022 13.6676 8.55027 13.7481 8.6308L17.1747 12.0577C17.2553 12.1384 17.2553 12.269 17.1747 12.3496ZM20.4455 9.07847L18.5764 10.9475C18.5361 10.9877 18.4833 11.0079 18.4304 11.0079C18.3776 11.0079 18.3248 10.9877 18.2845 10.9475L14.8579 7.52107C14.7774 7.44044 14.7774 7.30982 14.8579 7.22925C14.9386 7.14867 15.0692 7.14867 15.1498 7.22925L18.4304 10.5097L20.1535 8.78664C20.2342 8.70607 20.3648 8.70607 20.4454 8.78664C20.5261 8.86727 20.5261 8.99789 20.4455 9.07847Z"
+										fill="#282C32" />
+								</g>
+								<defs>
+									<clipPath id="clip0_81_1100">
+										<rect width="26" height="26" fill="white" />
+									</clipPath>
+								</defs>
+							</svg>
+							Бензиновые генераторы
+						</button>
+						<div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+							<div class="d-flex align-items-start flex-column catalog-content">
+								<a href="index.html"
+									class="d-flex align-items-center justify-content-between w-100 catalog-content__line">
+									<h1 class="m-0 text-black fw-normal">REG</h1>
+									<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+								</a>
+								<a href="index.html"
+									class="d-flex align-items-center justify-content-between w-100 catalog-content__line">
+									<h1 class="m-0 text-black fw-normal">REG</h1>
+									<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+								</a>
+								<a href="index.html"
+									class="d-flex align-items-center justify-content-between w-100 catalog-content__line">
+									<h1 class="m-0 text-black fw-normal">Poweron</h1>
+									<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+								</a>
+								<a href="index.html"
+									class="d-flex align-items-center justify-content-between w-100 catalog-content__line">
+									<h1 class="m-0 text-black fw-normal">Poweron</h1>
+									<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+								</a>
+								<a href="index.html"
+									class="d-flex align-items-center justify-content-between w-100 catalog-content__line">
+									<h1 class="m-0 text-black fw-normal">Generac</h1>
+									<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+								</a>
+								<a href="index.html"
+									class="d-flex align-items-center justify-content-between w-100 catalog-content__line">
+									<h1 class="m-0 text-black fw-normal">Generac</h1>
+									<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+								</a>
+								<a href="index.html"
+									class="d-flex align-items-center justify-content-between w-100 catalog-content__line">
+									<h1 class="m-0 text-black fw-normal">Mirkon</h1>
+									<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+								</a>
+								<a href="index.html"
+									class="d-flex align-items-center justify-content-between w-100 catalog-content__line">
+									<h1 class="m-0 text-black fw-normal">Mirkon</h1>
+									<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+								</a>
+								<a href="index.html"
+									class="d-flex align-items-center justify-content-between w-100 catalog-content__line">
+									<h1 class="m-0 text-black fw-normal">EVOline</h1>
+									<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+								</a>
+								<a href="index.html"
+									class="d-flex align-items-center justify-content-between w-100 catalog-content__line">
+									<h1 class="m-0 text-black fw-normal">EVOline</h1>
+									<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="p-0 m-0 border-0 accordion-item">
+						<button type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false"
+							aria-controls="collapse4"
+							class="w-100 fw-semibold py-2 px-3 d-flex align-items-center column-gap-4 rounded-4 border-0 text-start sidebar-acc__btn">
+							<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+								<path
+									d="M6.64707 1.16781C6.13665 1.19056 5.64665 1.49098 5.39465 1.93548C4.17548 4.09148 3.00182 6.16115 2.55907 7.9444C2.31523 8.92673 2.30007 9.8064 2.52348 10.5776C2.74865 11.3534 3.19432 11.921 3.58982 12.3141C4.47532 13.1938 5.63148 13.482 6.71298 13.4925C6.71823 13.4925 6.72582 13.4925 6.73107 13.4925C7.86623 13.4907 8.98623 13.1594 9.83673 12.3141C10.2311 11.9221 10.6785 11.3546 10.9042 10.5776C11.1288 9.80523 11.1096 8.92556 10.8657 7.9444C10.4224 6.16056 9.25048 4.09148 8.03132 1.93548C7.75832 1.45423 7.20298 1.14623 6.64998 1.16781C6.64882 1.16781 6.64765 1.16781 6.64707 1.16781ZM22.4752 2.88223C22.2326 2.90323 21.9969 3.01698 21.8271 3.2194L4.71332 23.5521C4.37323 23.9563 4.42398 24.5554 4.82823 24.8955C5.23248 25.2356 5.83273 25.1848 6.17282 24.7806L23.2866 4.4479C23.6267 4.04365 23.576 3.44456 23.1717 3.10448C22.9693 2.93473 22.7179 2.86181 22.4752 2.88223ZM21.5641 13.0124C21.3173 13.0194 21.0846 13.1261 20.9183 13.3087L14.6522 20.1512C14.3138 20.5222 14.3406 21.0968 14.7116 21.4351C14.8785 21.5874 15.0961 21.672 15.3224 21.672H15.8351H18.6824L17.5863 25.6894C17.4562 26.1741 17.7438 26.6729 18.2286 26.8024C18.5552 26.8899 18.9023 26.7896 19.1316 26.5416L25.3977 19.6991C25.7366 19.3287 25.711 18.7541 25.3406 18.4152C25.1731 18.2624 24.9544 18.1772 24.7275 18.1772H24.2141H21.3669L22.463 14.1598C22.5954 13.6756 22.309 13.1757 21.8248 13.0439C21.7402 13.0206 21.6516 13.0101 21.5641 13.0124Z"
+									fill="#282C32" />
+							</svg>
+							Гибридные генераторы (бензин +газ)
+						</button>
+						<div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+							<div class="d-flex align-items-start flex-column catalog-content">
+								<a href="index.html"
+									class="d-flex align-items-center justify-content-between w-100 catalog-content__line">
+									<h1 class="m-0 text-black fw-normal">REG</h1>
+									<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+								</a>
+								<a href="index.html"
+									class="d-flex align-items-center justify-content-between w-100 catalog-content__line">
+									<h1 class="m-0 text-black fw-normal">REG</h1>
+									<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+								</a>
+								<a href="index.html"
+									class="d-flex align-items-center justify-content-between w-100 catalog-content__line">
+									<h1 class="m-0 text-black fw-normal">Poweron</h1>
+									<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+								</a>
+								<a href="index.html"
+									class="d-flex align-items-center justify-content-between w-100 catalog-content__line">
+									<h1 class="m-0 text-black fw-normal">Poweron</h1>
+									<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+								</a>
+								<a href="index.html"
+									class="d-flex align-items-center justify-content-between w-100 catalog-content__line">
+									<h1 class="m-0 text-black fw-normal">Generac</h1>
+									<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+								</a>
+								<a href="index.html"
+									class="d-flex align-items-center justify-content-between w-100 catalog-content__line">
+									<h1 class="m-0 text-black fw-normal">Generac</h1>
+									<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+								</a>
+								<a href="index.html"
+									class="d-flex align-items-center justify-content-between w-100 catalog-content__line">
+									<h1 class="m-0 text-black fw-normal">Mirkon</h1>
+									<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+								</a>
+								<a href="index.html"
+									class="d-flex align-items-center justify-content-between w-100 catalog-content__line">
+									<h1 class="m-0 text-black fw-normal">Mirkon</h1>
+									<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+								</a>
+								<a href="index.html"
+									class="d-flex align-items-center justify-content-between w-100 catalog-content__line">
+									<h1 class="m-0 text-black fw-normal">EVOline</h1>
+									<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+								</a>
+								<a href="index.html"
+									class="d-flex align-items-center justify-content-between w-100 catalog-content__line">
+									<h1 class="m-0 text-black fw-normal">EVOline</h1>
+									<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="p-0 m-0 border-0 accordion-item">
+						<button type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false"
+							aria-controls="collapse5"
+							class="w-100 fw-semibold py-2 px-3 d-flex align-items-center column-gap-4 rounded-4 border-0 text-start sidebar-acc__btn">
+							<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+								<path
+									d="M20.7249 28.9646H19.2199V30.4693C19.9409 30.2497 20.5051 29.6857 20.7249 28.9646ZM17.9075 30.4693V28.9646H16.4028C16.6225 29.6856 17.1866 30.2495 17.9075 30.4693ZM19.2199 26.1476V27.6523H20.7249C20.5051 26.9312 19.9409 26.3672 19.2199 26.1476ZM17.9075 24.79V23.1045C15.5377 23.4021 13.6573 25.2824 13.3598 27.6523H15.0452C15.315 26.2031 16.4584 25.0598 17.9075 24.79ZM16.4028 27.6523H17.9075V26.1476C17.1866 26.3673 16.6225 26.9313 16.4028 27.6523ZM36.8112 10.9774H13.1888C12.9525 10.9774 12.736 11.1021 12.6178 11.3121L8.87201 18.028H41.1338L37.3887 11.3121C37.2705 11.1021 37.054 10.9774 36.8112 10.9774ZM17.9075 33.5123V31.8269C16.4584 31.5571 15.315 30.4137 15.0452 28.9646H13.3598C13.6573 31.3345 15.5377 33.2148 17.9075 33.5123ZM22.0824 27.6523H23.7678C23.4703 25.2824 21.5899 23.402 19.2199 23.1045V24.79C20.669 25.0598 21.8126 26.2031 22.0824 27.6523Z"
+									fill="#282C32" />
+								<path
+									d="M8.59546 38.3664C8.59546 38.7338 8.89072 39.0226 9.25164 39.0226H40.7483C41.1158 39.0226 41.4045 38.7338 41.4045 38.3664V19.3404H8.59546V38.3664ZM30.0468 35.3072C28.8408 35.3072 27.8597 34.3262 27.8597 33.1202C27.8597 31.9142 28.8408 30.9332 30.0468 30.9332C31.2528 30.9332 32.2342 31.9142 32.2342 33.1202C32.2342 34.3262 31.2528 35.3072 30.0468 35.3072ZM35.4603 35.3072C34.2543 35.3072 33.2732 34.3262 33.2732 33.1202C33.2732 31.9142 34.2543 30.9332 35.4603 30.9332C36.6663 30.9332 37.6477 31.9142 37.6477 33.1202C37.6477 34.3262 36.6663 35.3072 35.4603 35.3072ZM27.5041 22.5938C27.5041 22.2311 27.7979 21.9376 28.1603 21.9376H37.3468C37.7092 21.9376 38.003 22.2311 38.003 22.5938V27.3241C38.003 27.6868 37.7092 27.9803 37.3468 27.9803H28.1603C27.7979 27.9803 27.5041 27.6868 27.5041 27.3241V22.5938ZM18.5637 21.7466C22.1819 21.7466 25.1258 24.6905 25.1258 28.3084C25.1258 31.9264 22.1819 34.8702 18.5637 34.8702C14.9454 34.8702 12.0018 31.9264 12.0018 28.3084C12.0018 24.6905 14.9454 21.7466 18.5637 21.7466Z"
+									fill="#282C32" />
+								<path d="M36.6908 23.25H28.8167V26.6683H36.6908V23.25Z" fill="#282C32" />
+								<path
+									d="M35.4603 32.2456C34.9781 32.2456 34.5856 32.6377 34.5856 33.1202C34.5856 33.6028 34.9781 33.9949 35.4603 33.9949C35.9428 33.9949 36.3353 33.6028 36.3353 33.1202C36.3353 32.6377 35.9428 32.2456 35.4603 32.2456ZM30.0468 32.2456C29.5646 32.2456 29.1721 32.6377 29.1721 33.1202C29.1721 33.6028 29.5646 33.9949 30.0468 33.9949C30.5293 33.9949 30.9218 33.6028 30.9218 33.1202C30.9218 32.6377 30.5293 32.2456 30.0468 32.2456ZM23.7678 28.9647H22.0824C21.8126 30.4138 20.669 31.5572 19.2198 31.8269V33.5124C21.5899 33.2149 23.4703 31.3345 23.7678 28.9647Z"
+									fill="#282C32" />
+							</svg>
+							Стабилизаторы
+						</button>
+						<div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+							<div class="d-flex align-items-start flex-column catalog-content">
+								<a href="index.html"
+									class="d-flex align-items-center justify-content-between w-100 catalog-content__line">
+									<h1 class="m-0 text-black fw-normal">REG</h1>
+									<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+								</a>
+								<a href="index.html"
+									class="d-flex align-items-center justify-content-between w-100 catalog-content__line">
+									<h1 class="m-0 text-black fw-normal">REG</h1>
+									<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+								</a>
+								<a href="index.html"
+									class="d-flex align-items-center justify-content-between w-100 catalog-content__line">
+									<h1 class="m-0 text-black fw-normal">Poweron</h1>
+									<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+								</a>
+								<a href="index.html"
+									class="d-flex align-items-center justify-content-between w-100 catalog-content__line">
+									<h1 class="m-0 text-black fw-normal">Poweron</h1>
+									<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+								</a>
+								<a href="index.html"
+									class="d-flex align-items-center justify-content-between w-100 catalog-content__line">
+									<h1 class="m-0 text-black fw-normal">Generac</h1>
+									<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+								</a>
+								<a href="index.html"
+									class="d-flex align-items-center justify-content-between w-100 catalog-content__line">
+									<h1 class="m-0 text-black fw-normal">Generac</h1>
+									<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+								</a>
+								<a href="index.html"
+									class="d-flex align-items-center justify-content-between w-100 catalog-content__line">
+									<h1 class="m-0 text-black fw-normal">Mirkon</h1>
+									<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+								</a>
+								<a href="index.html"
+									class="d-flex align-items-center justify-content-between w-100 catalog-content__line">
+									<h1 class="m-0 text-black fw-normal">Mirkon</h1>
+									<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+								</a>
+								<a href="index.html"
+									class="d-flex align-items-center justify-content-between w-100 catalog-content__line">
+									<h1 class="m-0 text-black fw-normal">EVOline</h1>
+									<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+								</a>
+								<a href="index.html"
+									class="d-flex align-items-center justify-content-between w-100 catalog-content__line">
+									<h1 class="m-0 text-black fw-normal">EVOline</h1>
+									<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 		<!-- header start -->
 		<header>
-			<div class="header-top">
+			<div class="d-none d-md-block header-top">
 				<div class="container">
 					<div class="d-flex align-items-center justify-content-between header-top-wrapper">
 						<div class="d-flex align-items-center header-top__links">
@@ -62,15 +440,19 @@
 							<img src="images/whatsapp.svg" alt="whatsapp" width="24">
 						</a>
 					</div>
+					<div class="align-items-center column-gap-2 header-md__right">
+						<a href="#"><img src="images/header-order.svg" alt="basket"></a>
+						<button type="button" class="m-0 p-0 d-flex align-items-center border-0 bg-transparent"><img
+								src="images/media-bars.svg" alt="bars" width="100%" class="d-block"></button>
+					</div>
 				</div>
 			</div>
 		</header>
 		<!-- header end -->
-
 		<!-- header bottom start -->
 		<div class="py-3 header-bottom">
 			<div class="container">
-				<div class="d-flex align-items-center justify-content-between column-gap-4">
+				<div class="d-none d-lg-flex align-items-center justify-content-between column-gap-4">
 					<div class="dropdown">
 						<button type="button" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside"
 							aria-expanded="false"
@@ -80,7 +462,7 @@
 						</button>
 						<div class="p-0 m-0 border-0 mt-2 dropdown-menu">
 							<div class="rounded-5 bg-white w-100 catalog-menu">
-								<div class="d-grid catalog-menu__head" role="tablist">
+								<div class="d-grid mb-3 catalog-menu__head" role="tablist">
 									<div data-bs-toggle="tab" data-bs-target="#tab1" type="button" role="tab" aria-controls="tab1"
 										aria-selected="true"
 										class="rounded-4 d-flex align-items-start flex-column justify-content-between row-gap-2 menu__head-item active">
@@ -164,11 +546,60 @@
 										<h5 class="fw-semibold m-0 lh-sm">Стабилизаторы</h5>
 									</div>
 								</div>
-
 								<div class="tab-content" id="myTabContent">
 									<div class="tab-pane fade show active" id="tab1" role="tabpanel">
-										<h3>Home Tab</h3>
-										<p>This is the content for the Home tab.</p>
+										<div class="d-grid column-gap-5 catalog-content">
+											<a href="index.html"
+												class="d-flex align-items-center justify-content-between catalog-content__line">
+												<h1 class="m-0 text-black fw-normal">REG</h1>
+												<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+											</a>
+											<a href="index.html"
+												class="d-flex align-items-center justify-content-between catalog-content__line">
+												<h1 class="m-0 text-black fw-normal">REG</h1>
+												<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+											</a>
+											<a href="index.html"
+												class="d-flex align-items-center justify-content-between catalog-content__line">
+												<h1 class="m-0 text-black fw-normal">Poweron</h1>
+												<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+											</a>
+											<a href="index.html"
+												class="d-flex align-items-center justify-content-between catalog-content__line">
+												<h1 class="m-0 text-black fw-normal">Poweron</h1>
+												<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+											</a>
+											<a href="index.html"
+												class="d-flex align-items-center justify-content-between catalog-content__line">
+												<h1 class="m-0 text-black fw-normal">Generac</h1>
+												<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+											</a>
+											<a href="index.html"
+												class="d-flex align-items-center justify-content-between catalog-content__line">
+												<h1 class="m-0 text-black fw-normal">Generac</h1>
+												<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+											</a>
+											<a href="index.html"
+												class="d-flex align-items-center justify-content-between catalog-content__line">
+												<h1 class="m-0 text-black fw-normal">Mirkon</h1>
+												<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+											</a>
+											<a href="index.html"
+												class="d-flex align-items-center justify-content-between catalog-content__line">
+												<h1 class="m-0 text-black fw-normal">Mirkon</h1>
+												<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+											</a>
+											<a href="index.html"
+												class="d-flex align-items-center justify-content-between catalog-content__line">
+												<h1 class="m-0 text-black fw-normal">EVOline</h1>
+												<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+											</a>
+											<a href="index.html"
+												class="d-flex align-items-center justify-content-between catalog-content__line">
+												<h1 class="m-0 text-black fw-normal">EVOline</h1>
+												<span class="lh-1 fw-semibold text-white rounded-5">от 5.5 до 14 кВт</span>
+											</a>
+										</div>
 									</div>
 									<div class="tab-pane fade" id="tab2" role="tabpanel">
 										<h3>Profile Tab</h3>
@@ -201,9 +632,21 @@
 						<a href="index.html">
 							<img src="images/like.svg" alt="icon" width="19">
 						</a>
-						<a href="index.html">
+						<a href="index.html" class="header-order__btn">
 							<img src="images/order-btn-icon.svg" alt="icon" width="15.5">
 						</a>
+					</div>
+				</div>
+				<div class="d-flex d-lg-none rounded-5 header-bottom-md">
+					<button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+						aria-controls="offcanvasRight"
+						class="d-flex text-white fw-semibold lh-1 align-items-center column-gap-3 rounded-5 border-0 header-bottom__btn">
+						Kаталог
+						<img src="images/catalog-icon.svg" alt="catalog-icon" width="19.091px">
+					</button>
+					<div class="d-flex align-items-center column-gap-2 w-100 rounded-5 header-bottom__search">
+						<input type="search" class="w-100 bg-transparent border-0" placeholder="Поиск">
+						<img src="images/search-icon.svg" alt="search icon" width="16">
 					</div>
 				</div>
 			</div>
@@ -223,16 +666,20 @@
 					<div class="product-left">
 						<h1 class="fw-semibold mb-3 product__title">Газовый электрогенератор <span class="fw-normal">REG GG14-230S
 								(220В) на 14 кВт</span></h1>
-						<div class="d-grid align-items-center gap-5 product-grid">
+						<div class="d-grid align-items-center gap-3 gap-xl-5 gap-lg-4 product-grid">
 							<div class="product-slide-content">
 								<div id="product_slider" class="splide">
 									<div class="splide__track">
-										<ul class="splide__list">
-											<li class="border-0 splide__slide"><img src="images/product-main.webp" alt="Slide 1"></li>
-											<li class="border-0 splide__slide"><img src="images/product-main.webp" alt="Slide 1"></li>
-											<li class="border-0 splide__slide"><img src="images/product-main.webp" alt="Slide 1"></li>
-											<li class="border-0 splide__slide"><img src="images/product-main.webp" alt="Slide 1"></li>
-										</ul>
+										<div class="splide__list">
+											<a href="images/product-main.webp" class="border-0 splide__slide"><img
+													src="images/product-main.webp" alt="Slide 1"></a>
+											<a href="images/product-main.webp" class="border-0 splide__slide"><img
+													src="images/product-main.webp" alt="Slide 1"></a>
+											<a href="images/product-main.webp" class="border-0 splide__slide"><img
+													src="images/product-main.webp" alt="Slide 1"></a>
+											<a href="images/product-main.webp" class="border-0 splide__slide"><img
+													src="images/product-main.webp" alt="Slide 1"></a>
+										</div>
 									</div>
 								</div>
 								<div id="thumbnail_product_slider" class="splide">
@@ -256,7 +703,7 @@
 									<li class="fw-semibold lh-1 text-white rounded-5 bg-blue">220 В</li>
 									<li class="fw-semibold lh-1 text-white rounded-5 bg-blue">Срок отгрузки до 2х дней</li>
 								</ul>
-								<div class="d-flex align-items-start gap-2 flex-column mb-4 params-line">
+								<div class="d-flex align-items-start gap-2 flex-column mb-1 mb-md-4 params-line">
 									<div class="d-flex align-items-start justify-content-between w-100 line">
 										<h6 class="fw-normal text-black">Назначение генератора</h6> <b class="fw-semibold">Резервный</b>
 									</div>
@@ -352,7 +799,8 @@
 									<input class="border-0 p-0" type="number" placeholder="Телефон" name="number">
 								</div>
 							</div>
-							<div class="w-100 d-flex align-items-center justify-content-between proposal-form__policy">
+							<div
+								class="w-100 d-flex align-items-center justify-content-center justify-content-md-between proposal-form__policy">
 								<div class="d-flex align-items-center column-gap-2 justify-content-between policy-check">
 									<input class="position-relative rounded-5 policy-check__input" type="checkbox" value=""
 										id="flexCheckDefault">
@@ -360,11 +808,16 @@
 										Юридическое лицо
 									</label>
 								</div>
-								<span>Отправляя свои данные вы соглашаетесь с Политикой конфиденциальности</span>
+								<span class="d-none d-md-block">Отправляя свои данные вы соглашаетесь с Политикой
+									конфиденциальности</span>
 							</div>
 						</div>
 						<button type="button" class="rounded-5 border-0 text-white fw-semibold proposal-form__btn">Отправить на
 							почту</button>
+						<div class="d-block d-md-none text-center proposal-form__policy">
+							<span>Отправляя свои данные вы соглашаетесь с Политикой
+								конфиденциальности</span>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -563,11 +1016,17 @@
 						<!-- Main Slider -->
 						<div id="montage" class="splide">
 							<div class="splide__track">
-								<ul class="splide__list">
-									<li class="border-0 splide__slide"><img src="images/montage.webp" alt="Slide 1"></li>
-									<li class="border-0 splide__slide"><img src="images/montage.webp" alt="Slide 1"></li>
-									<li class="border-0 splide__slide"><img src="images/montage.webp" alt="Slide 1"></li>
-								</ul>
+								<div class="splide__list">
+									<a href="images/montage.webp" class="border-0 splide__slide">
+										<img src="images/montage.webp" alt="Slide 1">
+									</a>
+									<a href="images/montage.webp" class="border-0 splide__slide">
+										<img src="images/montage.webp" alt="Slide 1">
+									</a>
+									<a href="images/montage.webp" class="border-0 splide__slide">
+										<img src="images/montage.webp" alt="Slide 1">
+									</a>
+								</div>
 							</div>
 						</div>
 						<!-- Thumbnail Slider -->
@@ -620,7 +1079,7 @@
 					<button type="button" class="border-0 fw-semibold text-white rounded-5">Заказать звонок</button>
 				</form>
 			</div>
-			<div class="d-grid gap-2 footer-wrapper">
+			<div class="d-grid gap-md-2 footer-wrapper">
 				<div class="footer-wrapper__serie">
 					<h2 class="m-0 lh-1 text-white fw-bold text-uppercase footer-logo">Ватты - Ватты <br> КиловатТы</h2>
 				</div>
@@ -654,9 +1113,18 @@
 	<!-- footer end -->
 	</div>
 	<script src="libs/splide.min.js"></script>
+	<script src="libs/fancyapps.min.js"></script>
 	<script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 	<script src="js/main.js"></script>
 	<script>
+
+		Fancybox.bind('#montage a', {
+			groupAll: true,
+		});
+		Fancybox.bind('#product_slider a', {
+			groupAll: true,
+		});
+
 		var main = new Splide('#montage', {
 			type: 'fade',
 			pagination: false,
@@ -671,6 +1139,11 @@
 			cover: true,
 			arrows: false,
 			isNavigation: true,
+			breakpoints: {
+				768: {
+					gap: 6
+				}
+			}
 		}).mount();
 		main.sync(thumbnails);
 		var product_slider = new Splide('#product_slider', {
@@ -689,7 +1162,6 @@
 			isNavigation: true,
 		}).mount();
 		product_slider.sync(thumbnail_product_slider);
-
 	</script>
 </body>
 
